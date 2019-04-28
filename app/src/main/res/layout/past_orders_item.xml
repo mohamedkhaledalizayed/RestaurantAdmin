@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/new_order_item_bg"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/user_photo"
+            android:src="@drawable/support"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/user_photo"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Mohamed Khaled"
+            android:textStyle="bold"
+            android:id="@+id/user_name"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/user_photo"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Today at 12:33 AM"
+            android:textSize="@dimen/_8ssp"
+            android:layout_below="@+id/user_name"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Total : $ 106:00"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:id="@+id/total"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_id_348"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10ssp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/order_id"
+            android:layout_below="@+id/total"
+            />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message : Hi, please pack green sauce in my order and please tell your delivery boy that he have to come on 2nd floor because im not at home"
+        android:textSize="@dimen/_10ssp"
+        android:maxLines="2"
+        android:padding="@dimen/_5sdp"
+        android:ellipsize="end"
+        />
+
+    <ir.samanjafari.easycountdowntimer.EasyCountDownTextview
+        android:id="@+id/easyCountDownTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        app:hours="1"
+        app:minute="29"
+        app:second="59"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        app:textSize="@dimen/_8ssp"
+        app:textColor="#000"
+        app:setAnimation="true"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        >
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:textColor="#515072"
+            android:text="@string/details"
+            android:layout_alignParentStart="true"
+            android:id="@+id/view_detail_btn"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_9ssp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/view_details_btn_bg"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:textColor="#FFF"
+            android:text="@string/delivery_view"
+            android:textAllCaps="false"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/accept_id"
+            android:textSize="@dimen/_9ssp"
+            android:background="@drawable/completedl_order_btn_bg"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:textColor="#FFF"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_9ssp"
+            android:text="@string/completed_pickup"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_toStartOf="@+id/accept_id"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:background="@drawable/accept_order_btn_bg"
+            />
+    </RelativeLayout>
+</LinearLayout>
+</layout>

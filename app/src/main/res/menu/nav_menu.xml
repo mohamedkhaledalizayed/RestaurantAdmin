@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/switch_account_g">
+        <item android:title="@string/switch_to_user"
+            android:id="@+id/switch_account"
+            android:icon="@drawable/ic_swap_horiz_black_24dp"/>
+    </group>
+
+    <group android:id="@+id/profile_g">
+        <item android:title="@string/profile"
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_person_black_24dp"/>
+    </group>
+
+    <group android:id="@+id/_customer_feedback">
+    <item android:title="@string/customer_feedback"
+        android:id="@+id/customer_feedback"
+        android:icon="@drawable/ic_feedback_black_24dp"/>
+    </group>
+
+    <group android:id="@+id/_my_wallet">
+        <item android:title="@string/my_wallet"
+            android:id="@+id/my_wallet"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"/>
+    </group>
+
+    <group android:id="@+id/_settings">
+        <item android:title="@string/settings"
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_settings_black_24dp"/>
+    </group>
+
+    <group android:id="@+id/_share">
+        <item android:title="@string/share"
+            android:id="@+id/share"
+            android:icon="@drawable/ic_share_black_24dp"/>
+    </group>
+
+    <group android:id="@+id/_logout">
+        <item android:title="@string/logout"
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"/>
+    </group>
+
+</menu>

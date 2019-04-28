@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".views.activity.DeliveryActivity">
+
+<RelativeLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".views.activity.DeliveryActivity"
+    >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+    <ImageView
+        android:id="@+id/motor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/edit_text_background"
+        android:padding="@dimen/_6sdp"
+        android:onClick="motorDriver"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_motorcycle_black_24dp" />
+    <ImageView
+        android:id="@+id/car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_toEndOf="@+id/motor"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="centerCrop"
+        android:onClick="carDriver"
+        android:background="@drawable/edit_text_background"
+        android:src="@drawable/ic_directions_car_black_24dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/car"
+        android:layout_margin="@dimen/_16sdp"
+        android:background="@drawable/sign_in_bg"
+        android:textAlignment="center"
+        android:padding="@dimen/_6sdp"
+        android:hint="@string/order_number"
+        android:textColorHint="@color/text_hint_color"
+        />
+
+</RelativeLayout>
+    <include layout="@layout/bottom_sheet_driver_details" />
+</android.support.design.widget.CoordinatorLayout>

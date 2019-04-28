@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/food1"
+                android:scaleType="centerCrop"
+                android:id="@+id/category_item_image"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#B3FFFFFF"
+                android:layout_alignParentBottom="true"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chinese Food"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="#000"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/category_name"
+                    />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:layout_below="@+id/category_name"
+                    android:id="@+id/rate_bar"
+                    android:isIndicator="true"
+                    app:mrb_fillBackgroundStars="true"
+                    app:mrb_progressTint="#ffc400"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100 $"
+                    android:padding="@dimen/_3sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"
+                    android:background="@drawable/accept_order_btn_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_alignParentEnd="true"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more_vert_dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/overview"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+</layout>

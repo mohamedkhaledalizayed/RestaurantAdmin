@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="smile.algeria.khadamet.restaurantadmin">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Required to check whether user has network connection or not -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Dangerous Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".app.Restaurant"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".views.activity.AddOfferActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".views.activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".views.activity.SupportChatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.SupportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.DealOfferActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.MenuCategoryActivity"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAnKvay92-zyf4Or37UL6tsEF7BL8PiC6U" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".views.activity.DeliveryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.SettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.FeedBackActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.ProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.AddNewItemActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.AddNewCategoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.MenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.PastOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.OngoingOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.activity.NewOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".views.activity.OrderOnlineActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".views.activity.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".views.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

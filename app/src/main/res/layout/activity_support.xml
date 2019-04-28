@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/background_color"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.activity.SupportActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/support_icons"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_40sdp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khadamet DZ"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        >
+
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/call_center"
+            android:padding="@dimen/_5sdp"
+            android:onClick="callCenter"
+            android:background="@drawable/view_details_btn_bg"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/whatsapp"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:onClick="whatsApp"
+            android:background="@drawable/view_details_btn_bg"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/support_chat"
+            android:padding="@dimen/_5sdp"
+            android:onClick="supportChat"
+            android:background="@drawable/view_details_btn_bg"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/email"
+            android:padding="@dimen/_5sdp"
+            android:onClick="sendEmail"
+            android:background="@drawable/view_details_btn_bg"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/support_facebook"
+            android:padding="@dimen/_5sdp"
+            android:onClick="facebook"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/view_details_btn_bg"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/feedback_icon"
+            android:padding="@dimen/_5sdp"
+            android:onClick="feedback"
+            android:background="@drawable/view_details_btn_bg"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".views.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/custom_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_margin="@dimen/_10sdp"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="1dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/item_bg"
+                android:onClick="ordersOnline"
+                android:id="@+id/online_order"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/food"
+                    android:scaleType="centerCrop"
+                    android:onClick="ordersOnline"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/online_order"
+                    android:textColor="#000"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:padding="1dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/item_bg"
+                android:onClick="delivery"
+                android:id="@+id/delivery"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/delivery"
+                    android:scaleType="centerCrop"
+                    android:onClick="delivery"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery"
+                    android:textColor="#000"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="1dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/item_bg"
+                android:onClick="addNewCategory"
+                android:id="@+id/add_category"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/menu"
+                    android:scaleType="centerCrop"
+                    android:onClick="addNewCategory"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu"
+                    android:textColor="#000"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:padding="1dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/item_bg"
+                android:onClick="menu"
+                android:id="@+id/menu"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/deal_offer"
+                    android:scaleType="centerCrop"
+                    android:onClick="menu"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deal_offer"
+                    android:textColor="#000"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_margin="@dimen/_10sdp"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="1dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/item_bg"
+                android:onClick="dashboard"
+                android:id="@+id/dashboard"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/dashboard"
+                    android:scaleType="centerInside"
+                    android:onClick="dashboard"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboard"
+                    android:textColor="#000"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:padding="1dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/item_bg"
+                android:onClick="support"
+                android:id="@+id/support"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/support"
+                    android:scaleType="centerCrop"
+                    android:onClick="support"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/support"
+                    android:textColor="#000"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

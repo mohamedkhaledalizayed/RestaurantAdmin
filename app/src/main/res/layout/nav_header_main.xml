@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_220sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_photo"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:src="@drawable/mohamed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mohamed Khaled"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_15sdp"
+        style="@style/Widget.MaterialRatingBar.RatingBar"
+        android:numStars="5"
+        android:rating="5"
+        android:id="@+id/rate_bar"
+        android:isIndicator="true"
+        app:mrb_fillBackgroundStars="true"
+        app:mrb_progressTint="#ffc400"
+        android:layout_marginTop="@dimen/_5sdp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="#ccc"/>
+</LinearLayout>

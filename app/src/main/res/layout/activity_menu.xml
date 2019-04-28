@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".views.activity.MenuActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/menu_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:scrollbars="none"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_36sdp"
+            android:text="@string/add_category"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/add_category_btn_bg"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:onClick="addNewCategory"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_36sdp"
+            android:text="@string/add_menu_item"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/add_category_btn_bg"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:onClick="addNewItem"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">Restaurant Admin</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
+    <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
+    <string name="our_orders">Nos commandes</string>
+    <string name="add_new_category">Ajouter une nouvelle catégorie</string>
+    <string name="take_picture">Prendre une photo</string>
+    <string name="upload_image">Télécharger une image</string>
+    <string name="enter_category_name">Entrez le nom de la catégorie</string>
+    <string name="save">sauvegarder</string>
+    <string name="add_new_item">Ajoute un nouvel objet</string>
+    <string name="enter_item_name">Entrez le nom de l article</string>
+    <string name="enter_normal_price">Entrez le prix normal</string>
+    <string name="enter_description">Entrez la description de l article</string>
+    <string name="add_new_offer">Ajouter une nouvelle offre</string>
+    <string name="enter_offer_price">Entrez le prix de l offre</string>
+    <string name="dashboard">Statistique</string>
+    <string name="select_week">Sélectionnez une semaine</string>
+    <string name="select_month">Sélectionnez un mois</string>
+    <string name="year">Année</string>
+    <string name="monthly">Mensuel</string>
+    <string name="weekly">Hebdomadaire</string>
+    <string name="daily">Quotidien</string>
+    <string name="select_date">Sélectionner une date</string>
+    <string name="ordered">Commandé</string>
+    <string name="completed">Terminé</string>
+    <string name="canceled">Annulé</string>
+    <string name="delivery">Livraison</string>
+    <string name="pickup">Pick-up</string>
+    <string name="income">le revenu</string>
+    <string name="details">Détails</string>
+    <string name="export">Exportation</string>
+    <string name="deal_offer"><![CDATA[Deal & Offer]]></string>
+    <string name="deleted">Supprimé</string>
+    <string name="loading">Chargement</string>
+    <string name="language">la langue</string>
+    <string name="email">E-mail</string>
+    <string name="header">Entête</string>
+    <string name="message">Message</string>
+    <string name="send">Envoyer</string>
+    <string name="items_name">Nom des articles</string>
+    <string name="order_id_348">Identifiant:348</string>
+    <string name="delivery_view">Vue de livraison</string>
+    <string name="completed_pickup">Pick-up terminé</string>
+    <string name="total_106_00">Total : $ 106:00</string>
+    <string name="order_id">Identifiant:348</string>
+    <string name="call">Appel</string>
+    <string name="payment_way">Manière de paiement: Cash</string>
+    <string name="accept">Acceptez</string>
+    <string name="reject">Rejeter</string>
+    <string name="review">La revue</string>
+    <string name="coast">Coût</string>
+    <string name="time">Temps</string>
+    <string name="distance">Distance</string>
+    <string name="request">Demande</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="create_a_new_account">Créer un nouveau compte</string>
+    <string name="full_name">Nom complet</string>
+    <string name="e_mail_address">Adresse électronique</string>
+    <string name="phone_number">Numéro de téléphone</string>
+    <string name="create_password">Créer un mot de passe</string>
+    <string name="confirm_password">Confirmez le mot de passe</string>
+    <string name="already_have_an_account">Vous avez déjà un compte?</string>
+    <string name="sign_in_now">Connectez vous maintenant!</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="login_to_your_account">Connectez-vous à votre compte</string>
+    <string name="username_or_e_mail">Nom d\'utilisateur ou email</string>
+    <string name="password">Mot de passe</string>
+    <string name="forget_password">Mot de passe oublié?</string>
+    <string name="or">Ou</string>
+    <string name="login_with_facebook">SE CONNECTER AVEC FACEBOOK</string>
+    <string name="login_with_google">CONNEXION AVEC GOOGLE</string>
+    <string name="dont_you_have_an_account">Ne vous avez pas un compte?</string>
+    <string name="sign_up_now">S\'inscrire maintenant!</string>
+    <string name="english">English</string>
+    <string name="restaurant_name">Nom du restaurant</string>
+    <string name="restaurant_email">Email du restaurant</string>
+    <string name="restaurant_number">Numéro de restaurant</string>
+    <string name="open_time">Temps ouvert</string>
+    <string name="close_time">La période de fermeture</string>
+    <string name="about_restaurant">A propos du restaurant</string>
+    <string name="social_links">Liens sociaux</string>
+    <string name="navigate">Naviguer</string>
+    <string name="items">Articles</string>
+    <string name="quantity">Quantité</string>
+    <string name="price">Prix</string>
+    <string name="print_invoice">Imprimer la facture</string>
+    <string name="subtotal_106_00">Sous-total: 106.00 $</string>
+    <string name="delivery_fee_0_00">Frais de livraison: 0.00 $</string>
+    <string name="service_tax">Taxe de service (20%): 21.20 $</string>
+    <string name="discount">Réduction (20%): 21:20 $</string>
+    <string name="total">Aujourd\'hui : 106.00 $</string>
+    <string name="order_status">Statut de la commande: Commande livrée</string>
+    <string name="today_at_12_33_am">Aujourd\'hui at 12:33 AM</string>
+    <string name="cancel_order">annuler la commande</string>
+    <string name="accept_order">Accepter la commande</string>
+    <string name="add_menu_item">Ajouter un élément de menu</string>
+    <string name="add_category">ajouter une catégorie</string>
+    <string name="order_number">Nouvelle commande</string>
+    <string name="online_order">Commande en ligne</string>
+    <string name="menu">Menu</string>
+    <string name="support">Soutien</string>
+    <string name="edit">modifier</string>
+    <string name="delete">Effacer</string>
+    <string name="add_deal">Ajouter une affaire</string>
+    <string name="french">French</string>
+    <string name="home">Accueil</string>
+    <string name="switch_to_user">Passer à l\'utilisateur</string>
+    <string name="profile">Profil</string>
+    <string name="customer_feedback">Commentaires des clients</string>
+    <string name="my_wallet">Mon portefeuille</string>
+    <string name="settings">Réglages</string>
+    <string name="share">Partager</string>
+    <string name="logout">Connectez - Out</string>
+    <string name="off">arrêter</string>
+    <string name="week">La semaine</string>
+    <string name="close">Fermer</string>
+    <string name="feedback">Retour d\'information</string>
+    <string name="new_rder">Nouvelle commande</string>
+    <string name="completed_order">Commande complétée</string>
+    <string name="in_progress_order">En cours de commande</string>
+
+
+
+
+    <string-array name="array_order">
+        <item>Nouveau</item>
+        <item>Terminé</item>
+        <item>En cours</item>
+    </string-array>
+
+    <string-array name="array_name">
+        <item>Commande livrée</item>
+        <item>Commande annulée</item>
+    </string-array>
+
+    <string-array name="array_category">
+        <item>Choisir une catégorie</item>
+        <item>Mexican Food</item>
+        <item>Chinese Food</item>
+        <item>French Food</item>
+    </string-array>
+
+    <string-array name="array_months">
+        <item>janvier</item>
+        <item>février</item>
+        <item>Mars</item>
+        <item>avril</item>
+        <item>Peut</item>
+        <item>juin</item>
+        <item>juillet</item>
+        <item>août</item>
+        <item>septembre</item>
+        <item>octobre</item>
+        <item>novembre</item>
+        <item>décembre</item>
+    </string-array>
+
+    <string-array name="array_sup_category">
+        <item>Sélectionnez la catégorie Sup</item>
+        <item>Mexican Food</item>
+        <item>Chinese Food</item>
+        <item>French Food</item>
+    </string-array>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color"
+    android:padding="@dimen/_10sdp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="@string/coast"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="100 $"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="#000"
+        android:id="@+id/coast"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/coast"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/time"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/coast"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="1 hour 15 minute"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="#000"
+        android:id="@+id/time"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/time"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/distance"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/time"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="80.45 km"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="#000"
+        android:id="@+id/distance"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/distance"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        >
+
+
+        <Button
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:textColor="#FFF"
+            android:text="@string/request"
+            android:textAllCaps="false"
+            android:id="@+id/request"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:background="@drawable/accept_order_btn_bg"
+            />
+
+        <Button
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/call"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/cancel_order_btn_bg"
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="7dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@color/background_color"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/_38sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:background="@drawable/new_order_item_bg"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:padding="@dimen/_8sdp"
+            android:textStyle="bold"
+            android:id="@+id/message_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:text="I want to add new Category"            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-25-5 12:00pm"
+            android:layout_gravity="end"
+            android:id="@+id/msg_time"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/text_color"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            />
+
+
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/user_1_id"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/mohamed"
+        />
+
+</RelativeLayout>

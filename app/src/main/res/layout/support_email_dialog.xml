@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    >
+
+    <EditText
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_in_border"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"
+        android:textColorHint="@color/text_hint_color"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_12ssp"
+        />
+
+    <EditText
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_in_border"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:inputType="text"
+        android:hint="@string/header"
+        android:textColorHint="@color/text_hint_color"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textSize="@dimen/_12ssp"
+        />
+
+    <EditText
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:background="@drawable/sign_in_border"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:inputType="textMultiLine"
+        android:hint="@string/message"
+        android:textColorHint="@color/text_hint_color"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_12ssp"
+        />
+
+    <Button
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@drawable/completedl_order_btn_bg"
+        android:text="@string/send"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:textColor="#fff"
+        />
+
+</LinearLayout>
+</layout>

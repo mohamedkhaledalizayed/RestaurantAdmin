@@ -95,8 +95,8 @@
     <string name="total">Aujourd\'hui : 106.00 $</string>
     <string name="order_status">Statut de la commande: Commande livrée</string>
     <string name="today_at_12_33_am">Aujourd\'hui at 12:33 AM</string>
-    <string name="cancel_order">annuler la commande</string>
-    <string name="accept_order">Accepter la commande</string>
+    <string name="cancel_order">annuler</string>
+    <string name="accept_order">Accepter</string>
     <string name="add_menu_item">Ajouter un élément de menu</string>
     <string name="add_category">ajouter une catégorie</string>
     <string name="order_number">Nouvelle commande</string>
@@ -128,7 +128,6 @@
 
     <string-array name="array_order">
         <item>Nouveau</item>
-        <item>Terminé</item>
         <item>En cours</item>
     </string-array>
 

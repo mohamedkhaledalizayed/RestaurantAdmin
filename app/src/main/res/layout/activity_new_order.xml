@@ -90,48 +90,7 @@
                 android:layout_height="@dimen/_25sdp"
                 android:textColor="#515072"
                 android:text="@string/call"
-                android:textSize="@dimen/_9ssp"
-                android:textAllCaps="false"
-                android:background="@drawable/view_details_btn_bg"
-                android:id="@+id/call_customer_id"
-                android:layout_alignParentEnd="true"
-                />
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#ccc"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_email_black_24dp"
-                android:layout_alignParentStart="true"
-                android:id="@+id/mail_image_id"
-                android:layout_centerVertical="true"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/mail_image_id"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:text="johndoe@gmail.com"
-                android:layout_centerVertical="true"
-                />
-
-            <Button
-                android:layout_width="@dimen/_65sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:textColor="#515072"
-                android:text="@string/email"
+                android:onClick="call"
                 android:textSize="@dimen/_9ssp"
                 android:textAllCaps="false"
                 android:background="@drawable/view_details_btn_bg"
@@ -173,6 +132,7 @@
                 android:layout_height="@dimen/_25sdp"
                 android:textColor="#515072"
                 android:text="@string/navigate"
+                android:onClick="navigate"
                 android:textSize="@dimen/_9ssp"
                 android:textAllCaps="false"
                 android:background="@drawable/view_details_btn_bg"
@@ -258,18 +218,6 @@
             android:background="#1A515072"
             >
 
-            <Button
-                android:layout_width="@dimen/_90sdp"
-                android:layout_height="wrap_content"
-                android:textColor="#515072"
-                android:text="@string/print_invoice"
-                android:textAllCaps="false"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@drawable/view_details_btn_bg"
-                />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -331,25 +279,26 @@
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_30sdp"
                 android:textColor="#FFF"
                 android:text="@string/accept_order"
                 android:textAllCaps="false"
                 android:id="@+id/accept_id"
-                android:paddingEnd="@dimen/_4sdp"
-                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:background="@drawable/accept_order_btn_bg"
                 />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_30sdp"
                 android:textColor="#FFF"
                 android:textAllCaps="false"
+                android:onClick="cancel"
                 android:text="@string/cancel_order"
-                android:paddingEnd="@dimen/_4sdp"
-                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingStart="@dimen/_5sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:background="@drawable/cancel_order_btn_bg"
                 />

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
@@ -11,16 +12,18 @@ import java.util.List;
 import smile.algeria.khadamet.restaurantadmin.R;
 import smile.algeria.khadamet.restaurantadmin.databinding.DealOfferItemBinding;
 import smile.algeria.khadamet.restaurantadmin.databinding.FeedBackItemBinding;
+import smile.algeria.khadamet.restaurantadmin.views.interfaces.IDealItemHandler;
 
 public class DealOfferAdapter  extends RecyclerView.Adapter<DealOfferAdapter.MyViewHolder> {
 
     private List<String> recentList;
     private Context context;
     private LayoutInflater layoutInflater;
-
+    private IDealItemHandler handler;
     public DealOfferAdapter(Context context, List<String> recentList) {
         this.recentList = recentList;
         this.context=context;
+        handler = (IDealItemHandler)context;
     }
 
     @Override
@@ -38,6 +41,12 @@ public class DealOfferAdapter  extends RecyclerView.Adapter<DealOfferAdapter.MyV
 
     @Override
     public void onBindViewHolder(final DealOfferAdapter.MyViewHolder holder, final int position) {
+        holder.binding.item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handler.onClick();
+            }
+        });
     }
 
     @Override

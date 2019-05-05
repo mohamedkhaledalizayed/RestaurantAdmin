@@ -145,6 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_80sdp"
                 android:text="60"
+                android:onClick="ordered"
                 android:textColor="#FFF"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -179,6 +180,7 @@
                 android:textColor="#FFF"
                 android:textAlignment="center"
                 android:gravity="center"
+                android:onClick="completed"
                 android:textSize="@dimen/_12ssp"
                 android:background="@drawable/dashboard_background"
                 />
@@ -209,6 +211,7 @@
                 android:textColor="#FFF"
                 android:textAlignment="center"
                 android:gravity="center"
+                android:onClick="canceled"
                 android:textSize="@dimen/_12ssp"
                 android:background="@drawable/dashboard_background"
                 />
@@ -250,6 +253,7 @@
                 android:textColor="#FFF"
                 android:textAlignment="center"
                 android:gravity="center"
+                android:onClick="delivery"
                 android:textSize="@dimen/_12ssp"
                 android:background="@drawable/dashboard_background"
                 />
@@ -281,6 +285,7 @@
                 android:textColor="#FFF"
                 android:textAlignment="center"
                 android:gravity="center"
+                android:onClick="pickup"
                 android:textSize="@dimen/_12ssp"
                 android:background="@drawable/dashboard_background"
                 />
@@ -311,6 +316,7 @@
                 android:textColor="#FFF"
                 android:textAlignment="center"
                 android:gravity="center"
+                android:onClick="income"
                 android:textSize="@dimen/_12ssp"
                 android:background="@drawable/dashboard_background"
                 />

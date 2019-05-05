@@ -3,6 +3,8 @@ package smile.algeria.khadamet.restaurantadmin.views.activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.databinding.DataBindingUtil;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -23,6 +25,7 @@ import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
 import in.galaxyofandroid.spinerdialog.SpinnerDialog;
 import smile.algeria.khadamet.restaurantadmin.R;
 import smile.algeria.khadamet.restaurantadmin.databinding.ActivityDashboardBinding;
+import smile.algeria.khadamet.restaurantadmin.views.dialog.ChartDialog;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -33,6 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
     private Date currentDate;
     private String date;
     private ActivityDashboardBinding binding;
+    private int selectedItem= 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     public void daily(View view) {
+        selectedItem = 1;
         binding.daily.setBackgroundResource(R.drawable.completedl_order_btn_bg);
         binding.monthly.setBackgroundResource(R.drawable.dashboard_background);
         binding.weekly.setBackgroundResource(R.drawable.dashboard_background);
@@ -62,6 +67,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     public void weekly(View view) {
+        selectedItem = 2;
         binding.weekly.setBackgroundResource(R.drawable.completedl_order_btn_bg);
         binding.monthly.setBackgroundResource(R.drawable.dashboard_background);
         binding.daily.setBackgroundResource(R.drawable.dashboard_background);
@@ -86,6 +92,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     public void monthly(View view) {
+        selectedItem = 3;
         binding.monthly.setBackgroundResource(R.drawable.completedl_order_btn_bg);
         binding.weekly.setBackgroundResource(R.drawable.dashboard_background);
         binding.daily.setBackgroundResource(R.drawable.dashboard_background);
@@ -130,5 +137,60 @@ public class DashboardActivity extends AppCompatActivity {
             finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showChart() {
+        FragmentManager fm = getSupportFragmentManager();
+        ChartDialog editNameDialogFragment = ChartDialog.newInstance();
+        editNameDialogFragment.show(fm, "Send Email Dialog");
+        editNameDialogFragment.setStyle(DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Holo_Light_Dialog_NoActionBar_MinWidth);
+    }
+
+    public void ordered(View view) {
+        if (selectedItem == 1){
+
+        }else {
+          showChart();
+        }
+    }
+
+    public void completed(View view) {
+        if (selectedItem == 1){
+
+        }else {
+            showChart();
+        }
+    }
+
+    public void canceled(View view) {
+        if (selectedItem == 1){
+
+        }else {
+            showChart();
+        }
+    }
+
+    public void delivery(View view) {
+        if (selectedItem == 1){
+
+        }else {
+            showChart();
+        }
+    }
+
+    public void pickup(View view) {
+        if (selectedItem == 1){
+
+        }else {
+            showChart();
+        }
+    }
+
+    public void income(View view) {
+        if (selectedItem == 1){
+
+        }else {
+            showChart();
+        }
     }
 }

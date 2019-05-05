@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
@@ -76,6 +77,7 @@ public class AddOfferActivity extends AppCompatActivity {
 
             @Override
             public void onImagePicked(File imageFile, EasyImage.ImageSource source, int type) {
+                binding.itemImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 binding.itemImage.setImageURI(Uri.fromFile(imageFile));
             }
 

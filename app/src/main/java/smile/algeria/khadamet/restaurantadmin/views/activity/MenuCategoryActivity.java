@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 import smile.algeria.khadamet.restaurantadmin.R;
 import smile.algeria.khadamet.restaurantadmin.databinding.ActivityMenuCategoryBinding;
+import smile.algeria.khadamet.restaurantadmin.utils.AppUtils;
 import smile.algeria.khadamet.restaurantadmin.views.adapter.MenuAdapter;
 import smile.algeria.khadamet.restaurantadmin.views.adapter.MenuCategoryAdapter;
 import smile.algeria.khadamet.restaurantadmin.views.interfaces.IMenuHandler;
@@ -55,6 +56,6 @@ public class MenuCategoryActivity extends AppCompatActivity implements IMenuHand
 
     @Override
     public void onClickDelete() {
-        Toast.makeText(this,"Deleted", Toast.LENGTH_LONG).show();
+        AppUtils.dialog(MenuCategoryActivity.this,"Delete Item","Are You Want To Delete This Item.");
     }
 }

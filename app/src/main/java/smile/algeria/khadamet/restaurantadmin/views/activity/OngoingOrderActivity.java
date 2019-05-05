@@ -1,16 +1,20 @@
 package smile.algeria.khadamet.restaurantadmin.views.activity;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 
 import smile.algeria.khadamet.restaurantadmin.R;
 import smile.algeria.khadamet.restaurantadmin.databinding.ActivityOngoingOrderBinding;
+import smile.algeria.khadamet.restaurantadmin.utils.AppUtils;
 import smile.algeria.khadamet.restaurantadmin.views.adapter.ItemsAdapter;
 
 public class OngoingOrderActivity extends AppCompatActivity {
@@ -38,5 +42,27 @@ public class OngoingOrderActivity extends AppCompatActivity {
             finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void cancel(View view) {
+        AppUtils.dialog(this,"Cancel Order","Are You Want To Cancel Order !");
+    }
+
+    public void call(View view) {
+        call("098765432");
+    }
+
+    public void navigate(View view) {
+        AppUtils.openMap(this,98,78);
+    }
+
+    public void call(String number){
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:" + number));
+        try {
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

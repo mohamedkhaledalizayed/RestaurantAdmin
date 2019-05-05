@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/background_color"
     tools:context=".views.activity.SettingsActivity">
@@ -37,13 +38,17 @@
                 android:layout_alignParentStart="true"
                 />
 
-            <TextView
-                android:id="@+id/lang_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
-                android:text="@string/english"
-                android:layout_alignParentEnd="true" />
+            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_25sdp"
+                custom:textToggleLeft="EN"
+                custom:textToggleRight="FR"
+                android:id="@+id/language_option"
+                android:textSize="@dimen/_8ssp"
+                custom:activeBgColor="@color/colorPrimary"
+                custom:inactiveBgColor="#FFF"
+                android:layout_alignParentEnd="true"
+                custom:toggleWidth="@dimen/_45sdp"/>
 
         </RelativeLayout>
 

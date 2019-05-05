@@ -1,8 +1,14 @@
 package smile.algeria.khadamet.restaurantadmin.utils;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+
+import com.crowdfire.cfalertdialog.CFAlertDialog;
+
+import smile.algeria.khadamet.restaurantadmin.views.activity.AddOfferActivity;
+import smile.algeria.khadamet.restaurantadmin.views.activity.DealOfferActivity;
 
 public class AppUtils {
 
@@ -17,6 +23,61 @@ public class AppUtils {
             context.startActivity(emailIntent);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void dialog(Context context, String title, String message){
+        CFAlertDialog.Builder builder = new CFAlertDialog.Builder(context)
+                .setDialogStyle(CFAlertDialog.CFAlertStyle.ALERT)
+                .setTitle(title)
+                .setMessage(message)
+                .addButton("Ok", -1, -1, CFAlertDialog.CFAlertActionStyle.POSITIVE, CFAlertDialog.CFAlertActionAlignment.JUSTIFIED, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).addButton("Cancel", -1, -1, CFAlertDialog.CFAlertActionStyle.NEGATIVE, CFAlertDialog.CFAlertActionAlignment.JUSTIFIED, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                ;
+
+// Show the alert
+        builder.show();
+    }
+
+    public static void dialog(final Context context, String title, String message, String fBtnName, String sBtnName){
+        CFAlertDialog.Builder builder = new CFAlertDialog.Builder(context)
+                .setDialogStyle(CFAlertDialog.CFAlertStyle.ALERT)
+                .setTitle(title)
+                .setMessage(message)
+                .addButton(fBtnName, -1, -1, CFAlertDialog.CFAlertActionStyle.POSITIVE, CFAlertDialog.CFAlertActionAlignment.JUSTIFIED, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        context.startActivity(new Intent(context, AddOfferActivity.class));
+                    }
+                }).addButton(sBtnName, -1, -1, CFAlertDialog.CFAlertActionStyle.NEGATIVE, CFAlertDialog.CFAlertActionAlignment.JUSTIFIED, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        dialog(context,"Delete","Are You Want To Delete Item !");
+                    }
+                })
+                ;
+
+// Show the alert
+        builder.show();
+    }
+
+    public static void openMap(Context context,float lat, float lon){
+        Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        if (mapIntent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(mapIntent);
         }
     }
 }

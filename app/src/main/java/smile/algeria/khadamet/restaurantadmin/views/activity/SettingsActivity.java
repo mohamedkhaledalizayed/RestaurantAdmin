@@ -16,6 +16,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import belka.us.androidtoggleswitch.widgets.BaseToggleSwitch;
+import belka.us.androidtoggleswitch.widgets.ToggleSwitch;
 import smile.algeria.khadamet.restaurantadmin.R;
 import smile.algeria.khadamet.restaurantadmin.utils.CacheUtils;
 import smile.algeria.khadamet.restaurantadmin.utils.LocaleHelper;
@@ -23,8 +25,9 @@ import smile.algeria.khadamet.restaurantadmin.utils.LocaleHelper;
 public class SettingsActivity extends AppCompatActivity {
 
     private static final String PREFS_FILE = "shared_preference_language";
-    private TextView title,language,languageName;
+    private TextView title,language;
     private Toolbar toolbar;
+    private ToggleSwitch aSwitch;
     private LinearLayout layout;
     private SharedPreferences sharedpreferences;
     private SharedPreferences.Editor editor;
@@ -40,13 +43,31 @@ public class SettingsActivity extends AppCompatActivity {
         editor = sharedpreferences.edit();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.settings));
-        languageName = findViewById(R.id.lang_name);
+        aSwitch = findViewById(R.id.language_option);
 
+        aSwitch.setOnToggleSwitchChangeListener(new BaseToggleSwitch.OnToggleSwitchChangeListener() {
+            @Override
+            public void onToggleSwitchChangeListener(int position, boolean isChecked) {
+                if (position==0){
+                    LocaleHelper.setLocale(SettingsActivity.this, "en");
+//            CacheUtils.getSharedPreferences(SettingsActivity.this).edit().putString("language", "en").apply();
+                    editor.putString("language", "en").commit();
+//            languageName.setText("English");
+                    recreate();
+                }else {
+                    LocaleHelper.setLocale(SettingsActivity.this, "fr");
+//            CacheUtils.getSharedPreferences(this).edit().putString("language", "fr").apply();
+                    editor.putString("language", "fr").commit();
+//            languageName.setText("French");
+                    recreate();
+                }
+            }
+        });
 
         if (sharedpreferences.getString("language","en").equalsIgnoreCase("fr")) {
-            languageName.setText("French");
+            aSwitch.setCheckedTogglePosition(1);
         } else {
-            languageName.setText("English");
+            aSwitch.setCheckedTogglePosition(0);
         }
     }
 
@@ -66,14 +87,14 @@ public class SettingsActivity extends AppCompatActivity {
             LocaleHelper.setLocale(SettingsActivity.this, "fr");
 //            CacheUtils.getSharedPreferences(this).edit().putString("language", "fr").apply();
             editor.putString("language", "fr").commit();
-            languageName.setText("French");
+//            languageName.setText("French");
             recreate();
         } else{
             Toast.makeText(getApplicationContext(),"English", Toast.LENGTH_LONG).show();
             LocaleHelper.setLocale(this, "en");
 //            CacheUtils.getSharedPreferences(SettingsActivity.this).edit().putString("language", "en").apply();
             editor.putString("language", "en").commit();
-            languageName.setText("English");
+//            languageName.setText("English");
             recreate();
         }
         return true;

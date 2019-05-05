@@ -1,8 +1,11 @@
 package smile.algeria.khadamet.restaurantadmin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import smile.algeria.khadamet.restaurantadmin.views.activity.MainActivity;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -13,6 +16,12 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void signIn(View view) {
+        startActivity(new Intent(this, SignInActivity.class));
+        finish();
+    }
+
+    public void signUp(View view) {
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 }

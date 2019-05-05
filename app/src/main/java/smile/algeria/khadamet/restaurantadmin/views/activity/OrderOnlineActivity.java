@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import smile.algeria.khadamet.restaurantadmin.ViewPagerAdapter;
+import smile.algeria.khadamet.restaurantadmin.utils.AppUtils;
 import smile.algeria.khadamet.restaurantadmin.views.interfaces.IOrderNumberHandler;
 import smile.algeria.khadamet.restaurantadmin.views.interfaces.IOrdersHandler;
 import smile.algeria.khadamet.restaurantadmin.views.fragment.NewOrdersFragment;
@@ -81,7 +82,6 @@ public class OrderOnlineActivity extends AppCompatActivity implements IOrdersHan
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new NewOrdersFragment());
         adapter.addFragment(new OnGoingOrdersFragment());
-        adapter.addFragment(new PastOrdersFragment());
         binding.myViewpager.setAdapter(adapter);
 
 
@@ -107,6 +107,7 @@ public class OrderOnlineActivity extends AppCompatActivity implements IOrdersHan
 
     @Override
     public void onCancelClicked() {
+        AppUtils.dialog(OrderOnlineActivity.this,"Cancel Order","Are You Want To Cancel Order !");
     }
 
     @Override

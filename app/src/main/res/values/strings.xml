@@ -127,7 +127,6 @@
 
     <string-array name="array_order">
         <item>New</item>
-        <item>Completed</item>
         <item>In Progress</item>
     </string-array>
 

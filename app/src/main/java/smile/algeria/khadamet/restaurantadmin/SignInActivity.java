@@ -17,14 +17,11 @@ public class SignInActivity extends AppCompatActivity {
 
     public void signUp(View view) {
         startActivity(new Intent(this,SignUpActivity.class));
+        finish();
     }
 
     public void signIn(View view) {
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
-
-
-//https://medium.freecodecamp.org/25-new-android-libraries-which-you-definitely-want-to-try-at-the-beginning-of-2017-45878d5408c0
-    //https://github.com/Gwokhov/Deadline
-
 }

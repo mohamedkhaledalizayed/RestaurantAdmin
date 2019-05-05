@@ -1,5 +1,6 @@
 package smile.algeria.khadamet.restaurantadmin.views.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -16,10 +17,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+
+import com.crowdfire.cfalertdialog.CFAlertDialog;
 
 import smile.algeria.khadamet.restaurantadmin.R;
 import smile.algeria.khadamet.restaurantadmin.databinding.FeedBackItemBinding;
+import smile.algeria.khadamet.restaurantadmin.utils.AppUtils;
 import smile.algeria.khadamet.restaurantadmin.utils.CacheUtils;
 import smile.algeria.khadamet.restaurantadmin.utils.LocaleHelper;
 
@@ -40,7 +45,13 @@ public class MainActivity extends AppCompatActivity implements
         TextView textView=findViewById(R.id.toolbar_title);
         textView.setText(R.string.home);
         drawer = findViewById(R.id.drawer_layout);
+//https://codinginfinite.com/dagger-retrofit-example-dependency-injection/
+        //https://www.google.com/search?q=retrofit+dagger+example&oq=retrofit+dagger+ex&aqs=chrome.0.0j69i57j0l2.10710j0j4&sourceid=chrome&ie=UTF-8
+        //https://www.youtube.com/watch?v=ijXjCtCXcN4&list=PLgCYzUzKIBE-eHpqt44Ea-Mi_iAUkpOdq
+        //https://mshmshvalley.com/%D9%83%D9%88%D8%B1%D8%B3-english-%D9%85%D8%AC%D8%A7%D9%86%D9%8A-%D9%85%D9%86-%D8%A7%D9%84-british-council/
 
+//https://medium.freecodecamp.org/25-new-android-libraries-which-you-definitely-want-to-try-at-the-beginning-of-2017-45878d5408c0
+        //https://github.com/Gwokhov/Deadline
 
         NavigationView navigationView = findViewById(R.id.nav_view);
 
@@ -113,15 +124,37 @@ public class MainActivity extends AppCompatActivity implements
                 break;
 
             case R.id.logout:
-/*
                 logout();
-*/
+
                 break;
         }
 
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void logout() {
+        CFAlertDialog.Builder builder = new CFAlertDialog.Builder(this)
+                .setDialogStyle(CFAlertDialog.CFAlertStyle.ALERT)
+                .setTitle("Logout")
+                .setMessage("Are You Want To Logout.")
+                .addButton("Ok", -1, -1, CFAlertDialog.CFAlertActionStyle.POSITIVE, CFAlertDialog.CFAlertActionAlignment.JUSTIFIED, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        finish();
+                    }
+                }).addButton("Cancel", -1, -1, CFAlertDialog.CFAlertActionStyle.NEGATIVE, CFAlertDialog.CFAlertActionAlignment.JUSTIFIED, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                ;
+
+// Show the alert
+        builder.show();
     }
 
     public void delivery(View view) {

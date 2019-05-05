@@ -47,6 +47,8 @@
             android:layout_marginStart="@dimen/_5sdp"
             android:background="@drawable/add_category_btn_bg"
             android:textColor="#FFF"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
             android:textAllCaps="false"
             android:onClick="addNewItem"
             />

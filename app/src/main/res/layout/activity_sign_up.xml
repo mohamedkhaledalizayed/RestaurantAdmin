@@ -183,6 +183,7 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:text="@string/sign_up"
+                android:onClick="signUp"
                 android:textColor="#fff"
                 />
 
